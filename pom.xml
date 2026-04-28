@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.automationframework</groupId>
+    <artifactId>automation-testing-framework</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Automation Testing Framework</name>
+    <description>Comprehensive automation testing framework for Web, Desktop, Mobile, and API testing</description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <selenium.version>4.15.0</selenium.version>
+        <appium.version>9.0.0</appium.version>
+        <testng.version>7.8.0</testng.version>
+        <restassured.version>5.3.2</restassured.version>
+        <extentreports.version>5.0.9</extentreports.version>
+        <log4j.version>2.20.0</log4j.version>
+    </properties>
+
+    <dependencies>
+        <!-- Selenium WebDriver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- Appium Java Client for Mobile Automation -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium.version}</version>
+        </dependency>
+
+        <!-- WinAppDriver for Windows Automation -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium.version}</version>
+        </dependency>
+
+        <!-- RestAssured for API Testing -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
+
+        <!-- JSON Path for API Response Validation -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
+
+        <!-- TestNG Framework -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- ExtentReports for Reporting -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
+        </dependency>
+
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+
+        <!-- Log4j 2 for Logging -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!-- JSON Processing -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
+        <!-- JSON Simple for Parsing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.3</version>
+        </dependency>
+
+        <!-- Apache Commons -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+
+        <!-- JUnit 4 (if needed) -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Hamcrest Matchers for Assertions -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <!-- AssertJ for Fluent Assertions -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.1</version>
+        </dependency>
+
+        <!-- WebDriverManager for Driver Management -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.6.2</version>
+        </dependency>
+
+        <!-- Lombok for Reducing Boilerplate (Java 17 Compatible) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac=ALL-UNNAMED</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire Plugin for TestNG Execution -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Shade Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

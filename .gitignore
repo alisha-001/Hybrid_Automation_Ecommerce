@@ -1,0 +1,63 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+*.class
+*.jar
+*.war
+
+# Logs
+logs/
+*.log
+test-reports/
+
+# Test Data
+test-data.json
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+config.local.properties
+
+# Build
+build/
+dist/
+*.o
+*.so
+*.dll
+
+# Git
+.git/
+.gitignore
+
+# Node modules (if using npm)
+node_modules/
+package-lock.json
+
+# Database
+*.db
+*.sqlite
+
+# Coverage reports
+coverage/
+.coverage
+htmlcov/

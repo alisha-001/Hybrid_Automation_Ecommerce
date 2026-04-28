@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Testing Framework Suite" parallel="false" thread-count="1">
+
+    <!-- Web Automation Tests -->
+    <test name="Web Automation Tests" enabled="true">
+        <classes>
+            <class name="com.automationframework.web.WebAutomationTest"/>
+        </classes>
+    </test>
+
+    <!-- API Automation Tests -->
+    <test name="API Automation Tests" enabled="true">
+        <classes>
+            <class name="com.automationframework.api.APIAutomationTest"/>
+        </classes>
+    </test>
+
+    <!-- Mobile Automation Tests (Comment out if Appium server not running) -->
+    <test name="Mobile Automation Tests" enabled="true">
+        <classes>
+            <class name="com.automationframework.mobile.MobileAutomationTest"/>
+        </classes>
+    </test>
+
+    <!-- Windows Automation Tests (Comment out if WinAppDriver not running) -->
+    <test name="Windows Automation Tests" enabled="true">
+        <classes>
+            <class name="com.automationframework.windows.WindowsAutomationTest"/>
+        </classes>
+    </test>
+
+</suite>

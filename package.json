@@ -1,0 +1,19 @@
+{
+  "name": "automation-testing-framework",
+  "version": "1.0.0",
+  "description": "A comprehensive, modular automation testing framework built with Java, Maven, and TestNG. This framework supports Web, Desktop, Mobile, and API automation using industry-standard tools and best practices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "appium": "^3.3.1"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^7.1.2"
+  }
+}

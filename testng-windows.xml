@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Windows Only Test Suite" parallel="false" thread-count="1">
+
+    <!-- Windows Automation Tests -->
+    <test name="Windows Automation Tests">
+        <classes>
+            <class name="com.automationframework.windows.WindowsAutomationTest"/>
+        </classes>
+    </test>
+
+</suite>
